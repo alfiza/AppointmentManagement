@@ -37,7 +37,7 @@
                                     <tr>
                                         <th scope="col" width="25%">Time Availability</th>
                                         <th scope="col" width="15%">Day</th>
-                                        <th scope="col" width="30%">Start Time</th>
+                                        <th scope="col" width="30%">Start Time</th><th></th>
                                         <th scope="col" width="30%">End Time</th>
                                     </tr>
                                 </thead>
@@ -53,7 +53,7 @@
                                             <td>
                                                 <input type="text" data-id="{{$key}}" id="startTime{{$key}}" name="startTime[{{$key}}]" class="form-control start_timepicker" value="{{(in_array($key,$available_days))?$doctor_details[$key]['start_time']:''}}" {{(in_array($key,$available_days))?'':'readonly'}}
                                                 {{(in_array($key,$available_days) && $doctor_details[$key]['open_status']==1)?"":"readonly"}}  autocomplete="off">
-                                            </td>
+                                            </td><td></td>
                                             <td>
                                                 <input type="text" data-id="{{$key}}" id="endTime{{$key}}" name="endTime[{{$key}}]" class="form-control end_timepicker"  value="{{(in_array($key,$available_days))?$doctor_details[$key]['end_time']:''}}" {{(in_array($key,$available_days))?'':'readonly'}}
                                                 {{(in_array($key,$available_days) && $doctor_details[$key]['open_status']==1)?"":"readonly"}}  autocomplete="off">

@@ -104,13 +104,13 @@ $(document).ready(function(){
         }
     });
 
-    $(".delete_appointment").click(function(){
+    $(document).on('click','.delete_appointment',function(){
         id = $(this).data('id');
         $("#module_title").html($("#docotrName"+id+" a").html());
         $("#delete-btn-conf").attr('onclick',"deleteAppointment("+id+")");
         $('#delete_confirm_div').show();
     });
-    $("#search").click(function(){
+    $(document).on('click','#search',function(){
         if($("#startTimeSearch").val()!='' && $("#endTimeSearch").val()=='')
         {
             $("#endTimeSearch").addClass("validate_td");
@@ -158,7 +158,7 @@ function deleteAppointment(doctor_id)
                     $("#info_div_title").html("Info");
                     $("#info_msg").html(data['message']);
                     $("#info_div").show();
-                    $(".table").load(location.href + " .table");
+                    $("#search").trigger("click");
                }
            }               
         }); 

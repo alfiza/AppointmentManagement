@@ -28,8 +28,9 @@
 </head>
 <style>.modal-dialog{left: 0% !important;} #info_div{z-index: 1060;}
     .validate_td{border:2.5px solid red;}
-    .ui-timepicker{font-size:10px}
-    
+    .ui-timepicker{font-size:10px}    
+    *{box-sizing: inherit;}
+    .form-control{height: 24px !important;}
 </style>
 <body>
     <div class="modal" id="info_div" tabindex="-1" role="dialog" aria-labelledby="info_div_title" aria-hidden="true"  data-backdrop="static"  aria-labelledby="staticBackdropLabel" aria-hidden="true">
